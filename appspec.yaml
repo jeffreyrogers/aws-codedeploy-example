@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /root/codedeploy-example
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+    - location: scripts/build.sh
+  ApplicationStart:
+    - location: scripts/start.sh
